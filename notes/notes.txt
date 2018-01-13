@@ -1,4 +1,3 @@
-3 pages. All have routes.
 
 Page 1: petition page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

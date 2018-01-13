@@ -3,8 +3,6 @@
 
 // replacing cookie session w/ SESSIONS
 
-
-
 - can use session objects to store data on server-side, giving each object a unique id. you put this id in a cookie and use it to find the right object for a request.
 
 - npm install express-session --save
