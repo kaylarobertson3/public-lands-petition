@@ -1,0 +1,23 @@
+
+<section id="main">
+    <div class="reg">
+    <h1>Register</h1>
+    <p>Been here before? <br /><a href="/login"><span class="bold">Login now</span></a></p>
+    <form action="/newReg" method="POST">
+
+        {{#error}}
+        <p class="error">Fields can't be empty</p>
+        {{/error}}
+
+        <div id="regForm">
+            <input type="text" name="first" placeholder="First Name">
+            <input type="text" name="last" placeholder="Last Name">
+            <input type="text" name="email" placeholder="email">
+            <input type="password" name="password" placeholder="password">
+        </div>
+
+        <button class="moreInfoButton buttonHover" name="signed">Register</button>
+
+        </form>
+    </div>
+</section>

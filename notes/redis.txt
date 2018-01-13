@@ -1,0 +1,50 @@
+======== R  E  D  I  S ========
+
+-One branch to push to heroku without redis.
+-Another branch with the same stuff + redis.
+-GIT TIP: Create a new branch before starting big changes / anything with redis / a new feature / etc. Merge branches when it's ready.
+    - get checkout -b kaylaredis origin/kayla
+
+
+ABOUT REDIS =======================
+
+- Doesn't store data in tables. It has various structures to keep your data. Most basic way is key, value pairs.
+
+- It's a database ish thing for things that you don't want to save forever.
+
+- It keeps data in memory, not disk
+
+-Redis is good for caching
+
+
+- updated path to redis srs, can run redic-server from anywhere to start redis server
+
+
+IN REDIS_CLI: =======================
+How do yo you redis cli?
+
+IN NODE FILE: =======================
+const redis = require('redis');
+
+var client = redis.createClient({
+    host: 'localhost',
+    port: 6379
+})
+
+client.on('error', function(err) {
+    console.log(err);
+})
+
+OR PROMISIFY ALL OF THIS ^
+
+exports.set = function(key) {
+    return new Promise(function(resolve, reject) {
+        slient.setex(key, function(err, data) {
+            if (err) {
+                reject(err);
+            } else {
+                resolve(JSON.parse(data));
+            }
+        })
+    });
+}

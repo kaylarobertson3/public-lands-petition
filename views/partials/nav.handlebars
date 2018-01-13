@@ -1,0 +1,25 @@
+<div id="navbar">
+  <ul class = "nav">
+
+        <li class="navlinks"><a href="/">Home</a></li>
+
+        {{#aboutScroll}}
+        <li class="navlinks" id="aboutScroll"><a>About</a></li>
+        {{/aboutScroll}}
+
+        {{#aboutLink}}
+        <li class="navlinks" id="aboutLink"><a href="/">About</a></li>
+        {{/aboutLink}}
+
+        {{#showLogin}}
+        <li class="login" id="loginButton"><a href="/login">Login</a></li>
+        {{/showLogin}}
+
+        {{#showLogout}}
+        <li class="login" id="loginButton"><a href="/logout">Logout</a></li>
+        {{/showLogout}}
+
+        <!-- <a href="/login"><button class="navButton buttonHover" name="button">Login</button></a> -->
+
+</ul>
+</div>

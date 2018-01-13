@@ -1,0 +1,21 @@
+Debugging Heroku slipups:
+
+1.) You didn't install dependencies properly (use --save i think)
+
+2.) Package.json:
+    -'main' property in package.json. Should be index.js
+
+
+3.) Package.json:
+    -'scripts' sould be 'node index.js'
+
+4.) look here if you have errors:
+        -heroku.com: More -- view logs or in terminal with 'heroku logs'
+
+        -more -- run console: run commands you want to run on heroku to text
+
+        -$ heroku run bash - it's like you're in the files. Can ls, ect
+
+        -
+
+How to push to heroku

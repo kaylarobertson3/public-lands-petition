@@ -1,0 +1,26 @@
+
+<section id="main">
+    <div class="reg">
+    <h1>Welcome back</h1>
+    <p>New here? <a href="/register"> <span class="bold">Register here</a></span></p>
+        <form action="/loginUser" method="POST">
+            {{#error}}
+            <p class="error">Fields can't be empty</p>
+            {{/error}}
+
+            {{#errorWrong}}
+            <p class="error">Email or password incorrect. Try again.</p>
+            {{/errorWrong}}
+
+            <div id="regForm">
+                <form action="/loginUser" method="POST">
+            <input class="whiteForm" type="text" name="email" placeholder="email">
+            <input class="whiteForm" type="password" name="password" placeholder="password">
+            <button class="moreInfoButton buttonHover" name="signed">Login</button>
+    </form>
+
+            </div>
+
+        </form>
+    </div>
+</section>

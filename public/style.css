@@ -1,0 +1,611 @@
+/* GENERAL ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+height: 100%;
+   width: 100%;
+   padding: 0;
+   margin: 0;
+}
+
+h1 {
+    font-weight: 900;
+    font-family: "Overpass", sans-serif;
+    font-size: 40px;
+    line-height: 1.4;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+li {
+    list-style: none;
+}
+.white {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+}
+
+.buttonHover:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
+h2 {
+    font-weight: 300;
+    font-family: "Open Sans", sans-serif;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    line-height: normal;
+    padding: 0 0 30px 0;
+}
+
+
+.home ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.home li {
+    float: left;
+    list-style: none;
+}
+
+.home {
+    padding: 0;
+}
+
+.error {
+    color: red;
+}
+
+
+
+/*underline link anim ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+a {
+    position: relative;
+     text-decoration: none;
+     color: black;
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.all {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('http://maxpixel.freegreatpicture.com/static/photo/2x/Montana-Glacier-National-Park-Mountains-Cracker-Lake-1733309.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+
+
+
+
+
+
+/*NAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.nav {
+    height: 25px;
+    padding: 60px 50px 0 50px;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li {
+    float: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    color: white;
+}
+
+.navlinks {
+    padding: 0px 40px 0px 0px;
+}
+
+.nav a {
+    color: white;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#loginButton {
+    float: right;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#aboutLink {
+    cursor: pointer;
+}
+
+#aboutScroll {
+    cursor: pointer;
+}
+
+/*About section ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+.about {
+    background-color: white;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.about h2 {
+    text-align: left;
+    font-weight: 900;
+    padding: 20px 150px 20px 150px;
+
+}
+.about p {
+    padding: 10px 150px 10px 150px;
+}
+/*reg PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.reg {
+    background-color: white;
+    padding: 60px;
+    margin: 40px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reg h1 {
+    text-align: center;
+    padding: 20px 0 10px 0;
+}
+
+.reg p {
+    padding: 20px 0 20px 0;
+    text-align: center;
+}
+
+
+.reg a {
+    position: relative;
+     /*color: #000;*/
+     text-decoration: none;
+    font-weight: 400;
+}
+
+.reg a:hover {
+    /*color: #000;*/
+}
+
+.reg a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 20px;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.reg a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+#regForm {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 0 20px 0;
+}
+
+
+/*LOGIN PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#login {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login h1 {
+    text-align: center;
+}
+
+#login p {
+    text-align: center;
+    font-size: 16px;
+}
+
+#login a {
+
+    color: white;
+}
+
+
+
+#loginWrapper form {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+/*HERO SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#hero {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#hero h1 {
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    margin: 0 70px 0 70px;
+    font-size: 70px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+}
+
+#hero h2 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+    padding: 35px 200px 35px 200px;
+}
+
+.signButton {
+    margin: 20px 20px 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.lowerSignButton {
+    margin: 40px 150px 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    float: right;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.thanksButtons {
+    margin: 20px 50px 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    float: left;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.moreInfoButton {
+    margin: 20px 0px 0 0;
+    padding: 10px;
+    border-radius: 10px;
+    /*float: right;*/
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.learnMoreButton {
+        padding: 10px;
+        margin: 20px 20px 0 20px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-family: "Overpass", sans-serif;
+        float: left;
+}
+
+
+
+.yourSig img {
+    width: 50%;
+}
+
+/*main page layout ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#main {
+    display: flex;
+    height: 100%;
+    /*height: 100%;*/
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: flex-start;*/
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+}
+
+#main h2 {
+    color: black;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+}
+
+.white h1 {
+    padding: 20px 0 20px 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/*SIGN SECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+
+#canvas {
+    border: 1px solid black;
+    background-color: white;
+    margin: 1em 0;
+}
+
+#sign {
+    padding: 200px 100px;
+    display: flex;
+}
+
+#form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid black;
+    /*background-color: rgba(255, 255, 255, 0.02);*/
+    color: black;
+    font-size: 16px;
+}
+
+.submit {
+    font-size: 16px;
+    float: right;
+    /*margin: 20px 20px 0 0;*/
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: white;
+    font-size: 16px;
+    font-family: "Overpass", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+.signherep {
+    text-align: center;
+    padding: 0px 0 0 0;
+}
+
+
+
+/*Signers / supporters ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.signersul {
+    list-style: none;
+    display: inline;
+}
+
+.signersli  {
+    padding: 0 20px 10px 0;
+}
+
+
+
+
+
+
+/*FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    background-color: rgb(238, 238, 238);
+    height: 20px;
+    padding: 18px 18px;
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    color: black;
+    text-align: center;
+    font-size: 13px;
+    margin: 0 5px;
+    /*text-shadow: 0 1px 2px rgba(0,0,0,0.20);*/
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    float: right;
+    display: block;
+}
+
+
+/*Media Queries ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (max-width: 920px) {
+
+    /*Hero*/
+    #hero h1 {
+        margin: 0 40px 0 40px;
+        font-size: 65px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+    }
+
+    #hero h2 {
+        padding: 35px 80px 35px 80px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+
+    /*Hero*/
+    #hero h1 {
+        margin: 0 20px 0 20px;
+        font-size: 55px;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.20);
+    }
+
+    #hero h2 {
+        padding: 35px 20px 35px 20px;
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+
+    /*Hero*/
+    .home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .signButton {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 880px) {
+    .about h2 {
+        text-align: left;
+        font-weight: 900;
+        padding: 20px 50px 20px 50px;
+
+    }
+    .about p {
+        padding: 10px 50px 10px 50px;
+    }
+    .lowerSignButton {
+        margin: 40px 50px 0 0;
+}
+
+@media only screen and (max-width: 530px) {
+    .about h2 {
+        text-align: left;
+        font-weight: 900;
+        padding: 20px 20px 20px 20px;
+
+    }
+    .about p {
+        padding: 10px 20px 10px 20px;
+    }
+    .lowerSignButton {
+        margin: 40px 20px 0 0;
+}
+
+@media only screen and (max-width: 401px) {
+    .about h2 {
+        text-align: left;
+        font-weight: 900;
+        padding: 10px;
+
+    }
+    .about p {
+        padding: 10px;
+    }
+    .lowerSignButton {
+        margin-top: 0;
+    }
+
+    #main {
+        height: 100%;
+    }
+}

@@ -1,0 +1,5 @@
+TO DO
+
+- Redis stuff (express session, configuring connect redis, req.session.destory)
+- install redis as resource on Heroku
+- change host / port on store to one property called url. that comes from config vars in heroku after setting up heroku/redis

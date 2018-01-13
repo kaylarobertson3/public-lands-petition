@@ -1,0 +1,22 @@
+====== FUN WITH EXPRESS ======
+
+Express router ~~~~~~~~~~~~
+    - You can modulerize your project to make it more manageable.
+    - Express router sets up a sub router
+    - Can have multipe sub routers
+    - Must require express in module:
+
+    var express = require('express'),
+    router = express.Router(); // capital r
+
+
+    - Now you use it just like you use app.
+    - can do router.get, router.post, router.delete, etc. the syntax is the same.
+
+
+    -At the end, export the router:
+    module.exports = router
+
+
+
+//Example ==========

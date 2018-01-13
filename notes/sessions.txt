@@ -1,0 +1,49 @@
+======== SESSIONS ========
+
+
+// replacing cookie session w/ SESSIONS
+
+
+
+- can use session objects to store data on server-side, giving each object a unique id. you put this id in a cookie and use it to find the right object for a request.
+
+- npm install express-session --save
+
+- connect redis (npm install connect-redis --save) lets your express server and your redis server talk to each other. It connects your session to redis
+
+===========================================
+var session = require('express-session'),
+
+
+//this returns a function. then we run that function with our session. What that function returns, we save into a var called Store.
+var Store = require('connect-redis')(session);
+
+app.use(session({
+    store: new Store({
+        ttl: 3600,
+        host: 'localhost',
+        port: 6379
+        //redis connect to heroku url goes somewhere in here. 6379 is the defaul redis port
+    }),
+    resave: false,
+    saveUninitialized: true,
+    secret: 'my super fun secret'
+}));
+
+
+
+
+Once the middleware is in place, every request will have a session property. It is an object to which you can add and remove properties and from which you can read properties at will.
+
+app.get('/payment', function(req, res, next) {
+    if (!req.session.user) {
+        return res.sendStatus(403);
+    }
+    if (!req.session.user.paymentMethods) {
+        req.session.user.paymentMethods = [];
+    }
+    res.render('payment', {
+        paymentMethods: req.session.user.paymentMethods
+    });
+});
+You can manually end a session by calling req.session.destroy.

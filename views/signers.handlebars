@@ -1,0 +1,32 @@
+<section id="main">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <h1 class="white">Our supporters</h1>
+
+    {{#showCity}}
+        <h1 class="white">from {{city}}</h1>
+        <ul class="signersul white">
+    {{/showCity}}
+    <br />
+    {{#each signers}}
+        <li class="signersli white">
+            <a class="white" href="{{this.website}}">{{ this.first }} {{ this.last }}</a> | {{ this.age}} |
+            <a class="white" href="/signers/{{city}}">{{this.city}}</a></li>
+
+    {{/each}}
+    </ul>
+
+    <br />
+    <br />
+
+    {{#showCity}}
+        <a href="/signers">
+            <h4 class="white">Back to all signers</h4></a>
+    {{/showCity}}
+
+</section>

@@ -1,0 +1,44 @@
+  <section id="login">
+      <h1 class="white">Sign the petition</h1>
+      <section id="loginWrapper">
+          <br />
+          <h3 class="white">Name: {{first}} {{last}}</h3>
+          <br />
+          <p class="white">Not you? <a href="/logout"><span class="bold">Logout</span></a></p>
+              {{#error}}
+              <p class="error">Fields can't be empty</p>
+              {{/error}}
+
+              {{#loggedInError}}
+              <p class="error">You must be logged in to sign. Need an account?<a href="/register">Sign up here</a></p>
+              {{/loggedInError}}
+
+          <form action="/submitSig" method="POST">
+              <div id="form">
+                  <input class="whiteForm" type="hidden" name="signature" id="sigInput">
+              </div>
+                  <br />
+                  <!-- <p class="signherep white">sign below:</p> -->
+
+                  <!-- <select id="color" name="color">
+                      <option value="#000">black</option>
+                      <option value="#77b6ab">blue</option>
+                      <option value="#9577b6">purple</option>
+                      <option value="#rgb(232, 153, 17)">orange</option>
+                  </select> -->
+
+                  <canvas id="canvas" width=445 height="100"></canvas>
+                  <br />
+
+                  <ul class="home">
+                  <li><button id="clear" class="learnMoreButton buttonHover clear" type="button">Clear</button></li>
+
+                  <li><button class="signButton buttonHover" type="submit">Submit </button></li>
+              </ul>
+
+                  <!-- <button class="signButton buttonHover">Submit</button> -->
+
+
+              </form>
+        </section>
+  </section>
