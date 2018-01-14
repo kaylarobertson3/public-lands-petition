@@ -115,6 +115,7 @@ exports.updateOptionalInfo = function(age, city, website, userId){
 
 //submitting optional info
 exports.submitOptionalInfo = function(age, city, website, userId){
+    console.log("inserting this into user profiles:", age, city, website);
     const q = `INSERT INTO user_profiles (age, city, website, user_id) VALUES ($1, $2, $3, $4);`;
     const params = [age, city, website, userId];
     return db.query(q, params).catch((err) => {

@@ -47,7 +47,7 @@ app.use(bodyParser.urlencoded({
 
 // FUNCTIONS =================================
 
-// check if logged in
+// check if logged in ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 function loginCheck(req, res, next) {
     if (!req.session.user) {
         res.redirect('/');
@@ -71,13 +71,11 @@ app.get('/', (req, res) => {
             layout: 'layout',
             showLogin: true,
             aboutScroll: true,
-
         });
     }
-
 });
 
-// register page~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// register page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get('/register', (req, res) => {
     if (req.session.user) {
         res.redirect('/signPetition');
@@ -184,16 +182,17 @@ app.get('/more-info', loginCheck, (req, res, next) => {
         layout: 'layout',
         title: 'Tell us about yourself',
         showLogout: true
-
     });
     req.session.user_profile = {
         age: req.body.age,
         city: req.body.city,
         website: req.body.website,
     };
+    // console.log("req.session.userpfoeild:", req.esesion.user_profile);
 });
 
 app.post('/submitInfo', (req, res) => {
+    console.log("req.body = ", req.body);
     dbModules.submitOptionalInfo(req.body.age, req.body.city, req.body.website, req.session.user.userId)
         .then(() => {
             res.redirect('/signPetition');
@@ -336,7 +335,6 @@ app.get('/settings', loginCheck, (req, res) => {
                 city: results.city,
                 website: results.website,
                 showLogout: true
-
             });
         });
 });

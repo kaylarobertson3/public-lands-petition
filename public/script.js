@@ -29,6 +29,7 @@ if (top.location.pathname === '/sign') {
 }
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 if (top.location.pathname === '/sign' || top.location.pathname === '/submitSig')
 {
     var signed = false;
@@ -65,8 +66,5 @@ if (top.location.pathname === '/sign' || top.location.pathname === '/submitSig')
 }
 
 //clear canvas
-
-
-
 
 // end canvas sig ~~~~~~~~~~~~~~~~~~~~~~~~
