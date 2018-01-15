@@ -13,7 +13,14 @@ I built this application in a week during my 12-week JavaScript-focused web deve
 
 From the landing page, users can view details about the petition and either register or login. Next, they are prompted to add more optional information to their profile.
 
+![Petition  Preview 1](https://github.com/kaylarobertson3/public-lands-petition/blob/master/preview1.gif
+ "Petition Preview 1")
+
+
 Then, users can sign by drawing on the Canvas. The unique signature is encrypted and stored in the database.
+
+![Petition  Preview 2](https://github.com/kaylarobertson3/public-lands-petition/blob/master/preview2.gif
+ "Petition Preview 2")
 
 Next, users are directer to a thank you page, which lets them delete their signature, edit their profile information, or view all signatures.
 
