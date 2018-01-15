@@ -323,6 +323,7 @@ app.post('/deleteSignature', (req, res) => {
 // update info page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get('/settings', loginCheck, (req, res) => {
     // console.log("cookies are", req.session.user);
+    console.log("cookies", req.session);
     dbModules.getSettings(req.session.user.userId)
         .then((results) => {
             console.log("rendering these settings ", results);
@@ -345,6 +346,9 @@ app.post('/updateInfo', (req, res) => {
         dbModules.updateOptionalInfo(req.body.age, req.body.city, req.body.website, req.session.user.userId)
     ])
         .then(() => {
+            req.session.user.first = req.body.first,
+            req.session.user.last = req.body.last,
+            req.session.user.email = req.body.email,            console.log("new cookies, ", req.session.user);
             res.redirect('/thankyou');
         });
 });

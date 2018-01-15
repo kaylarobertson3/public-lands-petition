@@ -83,11 +83,8 @@ exports.getUserInfo = function(email) {
 
 exports.getSettings = function(userId) {
     console.log("running getSettings: ");
-    return db.query(`SELECT user_profiles.age, user_profiles.city
-     FROM user_profiles
-     LEFT JOIN users
-     ON users.id = user_profiles.user_id
-     WHERE email = $1`,[email]).then((results) => {
+    return db.query(`SELECT age, city FROM user_profiles
+     WHERE user_id = $1`,[userId]).then((results) => {
         console.log("results from getSettings: ", results.rows);
         return results.rows[0];
     }).catch(function(err) {
