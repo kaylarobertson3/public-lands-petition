@@ -19,10 +19,6 @@ exports.newReg = function(first, last, email, password) {
     return db.query(q, params).then(function(results) {
         return results.rows[0].id;
     });
-    // .catch((err) => {
-    //     console.log(err);
-    //     // throw(err);
-    // });
 };
 
 // retreive signature image to display
@@ -113,6 +109,7 @@ exports.updateOptionalInfo = function(age, city, website, userId){
     });
 };
 
+
 //submitting optional info
 exports.submitOptionalInfo = function(age, city, website, userId){
     console.log("inserting this into user profiles:", age, city, website);
@@ -122,10 +119,6 @@ exports.submitOptionalInfo = function(age, city, website, userId){
         console.log("err in submitInfo post ", err);
     });
 };
-
-
-
-
 
 // SELECT users.first, users.last, user_profiles.age, user_profiles.city, user_profiles.website
 // FROM users
