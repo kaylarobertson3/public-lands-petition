@@ -1,7 +1,7 @@
-// const spicedPg = require('spiced-pg');
-// var db = process.env.DATABASE_URL || spicedPg('postgres:postgres:postgres@localhost:5432/signatures');
+const spicedPg = require('spiced-pg');
+var db = process.env.DATABASE_URL || spicedPg('postgres:postgres:postgres@localhost:5432/signatures');
 
-var db = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/signatures';
+// var db = process.env.DATABASE_URL || 'postgres://postgres:postgres@localhost:5432/signatures';
 
 // SIGNATURES QUERIES ===================================
 
