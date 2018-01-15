@@ -2,7 +2,7 @@
 
 The #protectpubliclands petition is a responsive, full stack application that gathers signatures and other user data in support of protecting public lands in Montana.
 
-View online **[here](https://protect-public-lands.herokuapp.com)**
+View full project online **[here](https://protect-public-lands.herokuapp.com).**
 
 ## Technologies
 * **Frontend**: Handlebars.js
@@ -22,9 +22,10 @@ Then, users can sign by drawing on the Canvas. The unique signature is encrypted
 ![Petition  Preview 2](https://github.com/kaylarobertson3/public-lands-petition/blob/master/preview2.gif
  "Petition Preview 2")
 
-Next, users are directer to a thank you page, which lets them delete their signature, edit their profile information, or view all signatures.
+Next, users are directer to a thank you page, which lets them delete their signature, edit their profile information, or view all signatures. View full project online **[here](https://protect-public-lands.herokuapp.com).**
 
-## Works in progress
+
+## Features in progress
 * Mobile touch events for canvas (everything is responsive except for canvas signature)
 * Redis
 * CSURF
