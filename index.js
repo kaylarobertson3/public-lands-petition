@@ -192,7 +192,7 @@ app.get('/more-info', loginCheck, (req, res, next) => {
 });
 
 app.post('/submitInfo', (req, res) => {
-    console.log("req.body = ", req.body);
+    console.log("sending this more info to db ", req.body);
     dbModules.submitOptionalInfo(req.body.age, req.body.city, req.body.website, req.session.user.userId)
         .then(() => {
             res.redirect('/signPetition');
@@ -322,18 +322,18 @@ app.post('/deleteSignature', (req, res) => {
 
 // update info page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get('/settings', loginCheck, (req, res) => {
-    console.log(req.session.email);
-    dbModules.getUserInfo(req.session.user.email)
+    // console.log("cookies are", req.session.user);
+    dbModules.getSettings(req.session.user.userId)
         .then((results) => {
+            console.log("rendering these settings ", results);
             res.render('settings', {
                 layout: 'layout',
                 title: 'Edit Profile',
                 first: req.session.user.first,
                 last: req.session.user.last,
-                email: results.email,
+                email: req.session.user.email,
                 age: results.age,
                 city: results.city,
-                website: results.website,
                 showLogout: true
             });
         });
@@ -341,8 +341,8 @@ app.get('/settings', loginCheck, (req, res) => {
 
 app.post('/updateInfo', (req, res) => {
     Promise.all([
-        dbModules.updateOriginalInfo(req.body.first, req.body.last, req.body.email, req.body.password, req.session.user.user_id),
-        dbModules.updateOptionalInfo(req.body.age, req.body.city, req.body.website, req.session.user.user_id)
+        dbModules.updateOriginalInfo(req.body.first, req.body.last, req.body.email, req.session.user.userId),
+        dbModules.updateOptionalInfo(req.body.age, req.body.city, req.body.website, req.session.user.userId)
     ])
         .then(() => {
             res.redirect('/thankyou');

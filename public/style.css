@@ -180,6 +180,8 @@ a:hover:before {
     display: flex;
     flex-direction: column;
     margin-top: 100px;
+    margin-bottom: 100px;
+
 }
 
 .about h2 {
@@ -579,6 +581,10 @@ footer li {
 @media only screen and (max-width: 360px) {
 
     /*Hero*/
+
+    #hero {
+        margin: 2rem 0 1rem 0;
+    }
     .home {
         display: flex;
         flex-direction: column;
@@ -661,7 +667,10 @@ footer li {
     #main {
         /* height: 100vh; */
         display: flex;
-        align-items: flex-start;
+        /* align-items: flex-start; */
+    }
+    footer {
+        margin-top: 20px;
     }
 }
 

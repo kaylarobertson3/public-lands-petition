@@ -81,6 +81,21 @@ exports.getUserInfo = function(email) {
     });
 };
 
+exports.getSettings = function(userId) {
+    console.log("running getSettings: ");
+    return db.query(`SELECT user_profiles.age, user_profiles.city
+     FROM user_profiles
+     LEFT JOIN users
+     ON users.id = user_profiles.user_id
+     WHERE email = $1`,[email]).then((results) => {
+        console.log("results from getSettings: ", results.rows);
+        return results.rows[0];
+    }).catch(function(err) {
+        console.log("error in getUserInfo", err);
+        throw err;
+    });
+};
+
 exports.deleteSignature = function(id) {
     return db.query(`DELETE FROM signatures
                      WHERE user_id = $1`, [id])
@@ -92,9 +107,13 @@ exports.deleteSignature = function(id) {
 
 // USER PROFILE queries =
 
-exports.updateOriginalInfo = function(first, last, email, password, userId) {
-    const params = [first, last, email, password, userId];
-    const q = `UPDATE users SET first = $1, last = $2, email = $3, password = $4 WHERE id = $5`;
+exports.updateOriginalInfo = function(first, last, email, userId) {
+    console.log("updating OG info with ", first, last, email);
+    const params = [first, last, email, userId];
+    const q = `
+            UPDATE users
+            SET first = $1, last = $2, email = $3
+            WHERE id = $4`;
     return db.query(q,params).catch((err) => {
         console.log("updateOriginalInfo error", err);
     });
@@ -102,8 +121,12 @@ exports.updateOriginalInfo = function(first, last, email, password, userId) {
 
 //updating optional info
 exports.updateOptionalInfo = function(age, city, website, userId){
+    console.log("Updating optional info with", age, city, userId);
     const params = [age, city, website, userId];
-    const q = `UPDATE user_profiles SET age = $1, city = $2, website = $3 WHERE user_id = $4`;
+    const q = `
+            UPDATE user_profiles
+            SET age = $1, city = $2, website = $3
+            WHERE user_id = $4`;
     return db.query(q,params).catch((err) => {
         console.log("updateOptionalInfo error ", err);
     });
