@@ -24,6 +24,7 @@ const auth = require('./auth.js');
 //     secret: 'my super fun secret'
 // }));
 
+
 //cookie Session
 var cookieSession = require('cookie-session');
 app.use(cookieSession({
