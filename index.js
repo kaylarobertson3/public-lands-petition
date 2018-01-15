@@ -3,8 +3,8 @@ const express = require('express');
 const app = express();
 const hb = require('express-handlebars');
 const bodyParser = require('body-parser');
-const dbModules = require('./db');
-const auth = require('./auth.js');
+const dbModules = require('./config/db.js');
+const auth = require('./config/auth.js');
 // var csrf = require('csurf');
 // app.use(csrf({ cookie: true }));
 
