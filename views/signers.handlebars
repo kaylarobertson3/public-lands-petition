@@ -8,12 +8,12 @@
     <h1 class="white">Our supporters</h1>
     {{#showCity}}
         <h1 class="white">from {{city}}</h1>
-        <ul class="signersul white">
     {{/showCity}}
     <br />
+    <ul class="signersul white" style="padding-left: 0px;">
     {{#each signers}}
         <li class="signersli white">
-            <p class="white">Name: {{ this.first }} {{ this.last }} | Age: {{ this.age}} | City: <a class="white" href="/signers/{{city}}">{{this.city}}</a></p>
+            <p class="white">Name: {{ this.first }} {{ this.last }} | Age: {{ this.age}} | <a class="white" href="/signers/{{city}}">{{this.city}}</a></p>
         </li>
     {{/each}}
     </ul>
@@ -22,7 +22,6 @@
     <p class="white">Click on a city to view all signers from that location</p>
     <br />
     {{#showCity}}
-            <button class="signButton buttonHover">        <a href="/signers">
-<h4>Back to all signers</h4></a></button>
+            <a href="/signers"><button class="signButton buttonHover"><h4>Back to all signers</h4></button></a>
     {{/showCity}}
 </section>

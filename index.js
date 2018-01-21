@@ -280,7 +280,6 @@ app.get('/thankyou', (req, res) => {
 // signers page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get('/signers', loginCheck, (req, res) => {
     dbModules.allSigs().then((result) => {
-        console.log(result);
         res.render('signers', {
             layout: 'layout',
             title: 'signers',
@@ -297,7 +296,6 @@ app.get('/signers', loginCheck, (req, res) => {
 // cities page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.get('/signers/:city', loginCheck, (req, res) => {
     dbModules.getSigsByCity(req.params.city).then(function(results){
-        console.log(results);
         res.render('signers', {
             layout: 'layout',
             title: 'signers',
@@ -312,7 +310,6 @@ app.get('/signers/:city', loginCheck, (req, res) => {
 
 // delete signature ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 app.post('/deleteSignature', (req, res) => {
-    console.log(req.session);
     dbModules.deleteSignature(req.session.user.userId)
         .then(() => {
             delete req.session.user.sigId;

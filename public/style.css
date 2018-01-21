@@ -490,10 +490,13 @@ input {
 .signersul {
     list-style: none;
     display: inline;
+    margin: 2rem 0 2rem 0;
+    text-align: center;
 }
 
 .signersli  {
     padding: 0 20px 10px 20px;
+    text-align: center;
 }
 
 
