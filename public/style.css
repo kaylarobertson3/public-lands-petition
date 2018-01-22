@@ -18,7 +18,7 @@
 }
 
 .content {
-    flex: 1;
+    flex: 1 1 auto;
     max-width: 100%;
 }
 
@@ -569,7 +569,7 @@ input {
 footer {
     background-color: rgb(238, 238, 238);
     height: 20px;
-    padding: 18px 18px;
+    padding: 1rem 0 2rem 0;
     display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
       display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
       display: -ms-flexbox;      /* TWEENER - IE 10 */
