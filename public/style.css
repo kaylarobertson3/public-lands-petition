@@ -26,6 +26,7 @@
 .content {
     flex: 1 1 auto;
     max-width: 100%;
+    width: 100%;
 }
 
 html, body {
