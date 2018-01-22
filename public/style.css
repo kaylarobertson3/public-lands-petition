@@ -11,6 +11,8 @@
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
+    height: 100%;
     min-height: 100vh;
     flex-direction: column;
 }
@@ -187,6 +189,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     flex-direction: column;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -213,6 +216,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     flex-direction: column;
     align-items: center;
 }
@@ -268,6 +272,8 @@ a:hover:before {
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
     flex-wrap: wrap;
+    box-sizing: border-box;
+
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -285,6 +291,8 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
+
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -313,6 +321,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -330,6 +339,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -439,6 +449,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     /* height: 100vh; */
     flex-direction: column;
     align-items: center;
@@ -467,6 +478,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     flex-direction: column;
     padding-top: 40px;
 }
@@ -484,6 +496,8 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
+
 }
 
 #form {
@@ -492,6 +506,7 @@ a:hover:before {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -560,6 +575,7 @@ footer {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+      box-sizing: border-box;
     justify-content: center;
 }
 
@@ -643,6 +659,7 @@ footer li {
           display: -ms-flexbox;      /* TWEENER - IE 10 */
           display: -webkit-flex;     /* NEW - Chrome */
           display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          box-sizing: border-box;
         flex-direction: column;
         align-items: center;
     }
@@ -671,6 +688,7 @@ footer li {
           display: -ms-flexbox;      /* TWEENER - IE 10 */
           display: -webkit-flex;     /* NEW - Chrome */
           display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          box-sizing: border-box;
         flex-direction: center;
         align-content: center;
     }
@@ -731,6 +749,7 @@ footer li {
           display: -ms-flexbox;      /* TWEENER - IE 10 */
           display: -webkit-flex;     /* NEW - Chrome */
           display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+          box-sizing: border-box;
         /* align-items: flex-start; */
     }
     footer {
