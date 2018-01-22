@@ -12,7 +12,6 @@
       display: -webkit-flex;     /* NEW - Chrome */
       display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
       box-sizing: border-box;
-      overflow: hidden;
     height: 100%;
     min-height: 100vh;
     flex-direction: column;
