@@ -61,6 +61,7 @@ li {
 .white {
     color: white;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
+    text-align: center;
 }
 
 .buttonHover:hover {
@@ -89,6 +90,7 @@ h2 {
 
 .home {
     padding: 0;
+    align-self: center;
 }
 
 .error {
@@ -363,7 +365,7 @@ a:hover:before {
     /* NEW, Spec - Opera 12.1, Firefox 20+ */
     box-sizing: border-box;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     width: 100%;
 }
@@ -477,7 +479,7 @@ a:hover:before {
     box-sizing: border-box;
     /* height: 100vh; */
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
     margin: 0 20px 0 20px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20);
 }
@@ -694,7 +696,6 @@ footer li {
         /* NEW, Spec - Opera 12.1, Firefox 20+ */
         box-sizing: border-box;
         flex-direction: column;
-        align-items: center;
     }
     .signButton {
         margin-right: 0;
