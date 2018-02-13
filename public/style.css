@@ -271,8 +271,8 @@ a:hover:before {
     flex-wrap: wrap;
     box-sizing: border-box;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 0 0 20px 0;
 }
 

@@ -1,20 +1,19 @@
 <section id="main">
     <div class="about">
-    <div class="yourSig"><img src="{{sig}}" alt="your signature img"></div>
+        <div class="yourSig"><img src="{{sig}}" alt="your signature img"></div>
 
-    <!-- <a href="/signers"><h4>See all {{numSigners}} signers</h4></a> -->
-<br />
-    <h1>Thanks, {{first}}!</h1>
+        <br />
+        <h1>Thanks, {{first}}!</h1>
 
-    <a href="/signers"><button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>See all signers</h4></button>
+        <a href="/signers"><button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>See all signers</h4></button></a>
 
-    <a href="/settings"><button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>Edit profile</h4></button>
+        <a href="/settings"><button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>Edit profile</h4></button></a>
 
-    <a><form action="/deleteSignature" method="post">
+        <a>
+            <form action="/deleteSignature" method="post">
+                <button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>Delete your signature</h4></button>
+            </form>
+        </a>
 
-    <button class="thanksButtons buttonHover" name="button" id="deleteSig"><h4>Delete your signature</h4></button>
-
-    </form></a>
-
-</div>
+    </div>
 </section>
