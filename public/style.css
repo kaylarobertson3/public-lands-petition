@@ -436,7 +436,7 @@ a:hover:before {
     display: -webkit-flex;
     display: flex;
     box-sizing: border-box;
-    height: 100vh;
+    /* height: 100vh; */
     flex-direction: column;
     align-items: center;
     margin: 0 20px 0 20px;
